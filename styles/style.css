@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&family=Big+Shoulders+Display:wght@700&family=Karla&family=Kumbh+Sans:wght@700&family=Lexend+Deca&family=Poppins:wght@100;200;300;400;600;700&family=Red+Hat+Display:wght@900&family=Roboto+Condensed:wght@300&family=Roboto:ital,wght@0,900;1,400&family=Spartan:wght@700&display=swap');
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(210, 46%, 95%);
+}
+.articles {
+    padding: 32px;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    grid-template-rows: repeat(3,minmax(0,1fr));
+    display: grid;
+    grid-template-areas: 
+    ". first ."
+    ". first ."
+    ". second ."
+    ". third ."
+    ". fourth ."
+    ". fourth ."
+    ". five ."
+    ". five .";
+    gap: 16px;
+}
+.articles__first {
+    background-image: url("../images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+    background-position: 84% 2%;
+    align-self: end;
+    grid-area: first;
+    background-color: hsl(263, 55%, 52%);
+    padding: 16px;
+    border-radius: 16px;
+}
+.articles__second {
+    grid-area: second;
+    background-color: hsl(217, 19%, 35%);
+    padding: 16px;
+    border-radius: 16px;
+}
+.articles__third {
+    grid-area: third;
+    background-color: hsl(0, 0%, 100%);
+    padding: 16px;
+    border-radius: 16px;
+}
+.articles__fourth {
+    grid-area: fourth;
+    background-color: #000;
+    padding: 16px;
+    border-radius: 16px;
+}
+.articles__five {
+    grid-area: five;
+    background-color: hsl(0, 0%, 100%);
+    padding: 16px;
+    border-radius: 16px;
+}
+.article__title {
+    font-size: 14px;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 12px;
+    border-radius: 16px;
+}
+.article__desc {
+    color: hsl(0, 0%, 100%);
+    opacity: 0.5;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+.user {
+    display: flex;
+    margin-bottom: 16px;
+}
+.user__credentials {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    align-self: center;
+}
+.user__img {
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+}
+.user__graduate {
+    font-size: 12px;
+    color: hsl(0, 0%, 100%);
+    opacity: 0.5;
+}
+.user__name {
+    font-size: 14px;
+    color: hsl(0, 0%, 100%)
+}
+.text-color-blck {
+    color:#000;
+}
+.text-color-blck-opacity {
+    opacity: 0.8;
+}
+.articles__first, .articles__second, 
+.articles__third, .articles__fourth, 
+.articles__five {
+    min-width: 250px;
+}
+@media (min-width: 1260px) {
+    .articles {
+        grid-template-columns: repeat(4,minmax(0,1fr));
+        grid-template-rows: repeat(2,minmax(0,1fr));
+        grid-template-areas: 
+        "first first second five"
+        "third fourth fourth five";
+        gap: 24px;
+   }
+}
